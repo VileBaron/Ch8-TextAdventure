@@ -53,9 +53,9 @@ public class Game
         eastWingCont = new Room("As you walk into the hallway, you notice the large displays immediately. One wall is titled ''Skitter''. \nThere are images of a woman in a black body suit. Next to it is a manikin with a tattered version of the body suit in the pictures. \n The other wall is titled ''Weaver'' with images of a woman in a white body suit. It is obvious that this is the same person as the other wall.");
         westWingCont = new Room("This hallway is covered in even more pictures of the woman in the body suit. Most of them are pictures of her surrounded by insects attacking villains or even heros. \nThough there are also, pictures of her attacking monstrosities or giving out food to people.");
         basement = new Room("You have entered the basement, through some large rusty doors. In this room is a empty doorframe to your left and a cabinet made of wood to your right.");
-        xroom1 = new Room("Skitter's Room");
-        xroom2 = new Room("Weaver's Room");
-        xroom3 = new Room("Khepri's Room");
+        xroom1 = new Room("Upon going through the portal, you find yourself inside a very run-down but well used looking room. there is a manikin in one corner of the room with a black body suit on it. Next to the manikin is a small table with a key part on it. \nOn one side of the room is another empty doorway with a keyhole next to it.");
+        xroom2 = new Room("After entering the second portal, around you is a more military looking room. The bed is neat and tidy and the manikin in the courner of the room is much more advanced. The Body suit on the manikin is a vibrant blue and white. \nThe key part is on the bed. ");
+        xroom3 = new Room("The moment you enter the portal, all around you is completely destroyed. Anything that mightve looked like a room or a building is either on fire or pulverised. \nFor some weird reason, a sense of dread fills you while you are in this room, and you feel as though you might be in danger if you continue staying in this room any longer. The key part is hovering in the air right in front of you.");
         dbasement = new Room("Here is the end game.");
         
         //All Items & Where they are & if they have a use
