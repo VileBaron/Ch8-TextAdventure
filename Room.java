@@ -19,9 +19,9 @@ import java.util.Iterator;
 
 public class Room 
 {
-    private String description;
+    public String description;
     private ArrayList <Item> items;
-    private HashMap<String, Room> exits;        // stores exits of this room.
+    public HashMap<String, Room> exits;        // stores exits of this room.
     private boolean locked = false;
 
     /**
@@ -57,9 +57,9 @@ public class Room
      * @param direction The direction of the exit.
      * @param neighbor  The room to which the exit leads.
      */
-    public void setExit(String direction, Room neighbor) 
+    public void setExit(String rand, Room neighbor) 
     {
-        exits.put(direction, neighbor);
+        exits.put(rand, neighbor);
     }
 
     /**
