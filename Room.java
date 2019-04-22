@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.Set;
 import java.util.HashMap;
 import java.util.Iterator;
@@ -12,14 +13,16 @@ import java.util.Iterator;
  * connected to other rooms via exits.  For each existing exit, the room 
  * stores a reference to the neighboring room.
  * 
- * @author  Michael Kölling and David J. Barnes
- * @version 2011.08.10
+ * @author  Michael Kölling and David J. Barnes + Zachary Johnson
+ * @version 4.2019
  */
 
 public class Room 
 {
     private String description;
+    private ArrayList <Item> items;
     private HashMap<String, Room> exits;        // stores exits of this room.
+    private boolean locked = false;
 
     /**
      * Create a room described "description". Initially, it has
@@ -31,8 +34,24 @@ public class Room
     {
         this.description = description;
         exits = new HashMap<String, Room>();
+        items = new ArrayList<Item>();
     }
-
+    
+    /**
+     * Add a List of Items
+     * @param the items that will be added to the room
+     */
+    public void addItem(Item i){
+        items.add(i);
+    }
+      
+    /**
+    * Return the List of All Items
+    */
+    public ArrayList<Item> getItems(){
+         return items;
+    }
+    
     /**
      * Define an exit from this room.
      * @param direction The direction of the exit.
@@ -60,9 +79,29 @@ public class Room
      */
     public String getLongDescription()
     {
-        return "You are " + description + ".\n" + getExitString();
+        String s =  "" + description + ".\n" + getExitString();
+        if (items.size() == 0){
+            s = s+ ". You see no items in this room.";
+        }
+        else {
+            s = s + ". You see: ";
+            for (Item i : items)
+            {
+                s = s + i.getName() + " ";
+            }
+        
+        }
+       return s;
     }
-
+    
+    /**
+     * 
+     * @return Check if the room is locked
+     */
+    public boolean getLocked() {
+         return locked;
+    }
+    
     /**
      * Return a string describing the room's exits, for example
      * "Exits: north west".
@@ -88,5 +127,14 @@ public class Room
     {
         return exits.get(direction);
     }
+    
+      /**
+   * Set Room to locked or not
+   * 
+   * @param true to set it to locked, false to unlock
+   */
+   public void setLocked(boolean b) {
+        locked = b;
+   }
 }
 

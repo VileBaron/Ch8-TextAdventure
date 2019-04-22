@@ -1,0 +1,16 @@
+#BlueJ class context
+comment0.target=Item
+comment0.text=\r\n\ This\ class\ creates\ the\ items\ that\ are\ used\ in\ game.\r\n\r\n\ @Zachary_Johnson\r\n\ @version\ 4/2019\r\n
+comment1.params=n\ d\ w
+comment1.target=Item(java.lang.String,\ java.lang.String,\ int)
+comment1.text=\r\n\ Constructor\ for\ objects\ of\ class\ Item\r\n\ @param\ n\ takes\ the\ name\ that\ the\ method\ is\ given\r\n\ @param\ d\ takes\ the\ description\ of\ the\ item\ that\ it\ is\ given\r\n\ @param\ w\ takes\ the\ weight\ of\ the\ item\ that\ it\ is\ given\r\n
+comment2.params=
+comment2.target=java.lang.String\ getName()
+comment2.text=\r\n\ @return\ Accessor\ for\ name\r\n
+comment3.params=
+comment3.target=java.lang.String\ getDescription()
+comment3.text=\r\n\ @return\ Accessor\ for\ description\r\n
+comment4.params=
+comment4.target=int\ getWeight()
+comment4.text=\r\n\ @return\ Accessor\ for\ weight\r\n
+numComments=5
