@@ -45,7 +45,7 @@ public class Game
         sidewalk = new Room("You are standing on the sidewalk. In front of you is a large building with a sign next to it, that says ''Taylor Hebert Historical Museum''. You see a possible side path going along the east and west sides of the building.");
         sidepath = new Room("The tile here is cracked and broken. Vines and grass around it are growing freely. To the left of the path, are old rusty metal doors. They appear to go into some sort of basement.");
         sidepath2 = new Room("As you walk this side path, you notice that the grass is far to unweildy to continue walking forward.");
-        entrance = new Room("");
+        entrance = new Room("In front of you is two large wooden doors that lead into the Museum.");
         inside = new Room("As you open the doors and enter the Museum, you see a front desk and two hallways a bit further ahead. \n There are a few paintings and pictures of a tall, stick-thin,young woman with long, curly black hair and glasses.");
         frontDesk = new Room("In front of you is a desk with a bell on it, along with a piece of paper that says ''Ring for Service''. \n After ringing the bell and waiting a little while, a blonde haired woman walks up behin the desk. \nThe woman introduces herself as Sarah, and gives you the usual tour guide introduction to the museum. \nHer first suggestion for you, is to look around the east wing of the museum.");
         eastWing = new Room("The entrance to the East wing. There is a hallway in front of you and the front desk is behind you. Weirdly enough, there is what appears to be a key on a small table near the entrance of the hallway.");
@@ -112,6 +112,8 @@ public class Game
         basement.setExit("south", xroom1);
         basement.setExit("east", sidepath);
         basement.setExit("north", dbasement);
+        
+        
         
         xroom1.setExit("west", xroom2);
         xroom1.setExit("north", basement);
